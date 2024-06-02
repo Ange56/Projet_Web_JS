@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link href="../css/styleplaterforme.css" rel="stylesheet"> <!--on relie le fichier html au fichier css correspondant-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet"><!--importation des icones google-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"><!--importation des polices de google-->
+        <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Marko+One&family=Roboto&family=Stint+Ultra+Expanded&display=swap" rel="stylesheet"><!--importation de Roboto et Lalezar-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"><!--importation des icones de fontawesome-->
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lalezar&family=Marko+One&family=Roboto&display=swap" rel="stylesheet"><!--importation de Audiowide-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" class="bootstrap">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous" class="bootstrap"></script>
+        <script src="../js/menu.js" defer></script>
+        <script src="../js/platerforme.js" defer></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+        <title> Recherches Plateformes technologiques </title>
+    </head>
+    <body>
+        <div id="reload" class="text-center">
+            <br>
+            <br>
+            <div class="spinner-border text-danger" style="width: 8rem; height: 8rem;" role="status">
+                <span class="sr-only"></span>
+            </div>
+        </div>
+        <header>
+            <nav>
+                <ul id="menu">
+                    <li><img src="../images/LabISEN.png" alt="logo officiel" height="70" onclick="clicLogo()"></li>
+                    
+                    <li><a href="accueil.html" class="bouton"><span class="material-icons icon-menu">home</span> &ensp;Accueil</a></li>
+                    
+                    <li class="dropbutton">
+                        <a class="current bouton"><span class="material-icons icon-menu">search</span> &ensp;Recherche<span class="material-icons icon-menu drop">arrow_drop_down</span></a>
+                        <div class="dropdown-menu">
+                            <a href="thematique_ver-finale.html" class="sous-bouton separateur"><div class="rectangle"></div>Thématiques de recherche</a>
+                            <a href="plateformes.html" class="sous-bouton"><div class="rectangle"></div>Plateformes technologiques</a>
+                        </div>
+                    </li>
+                    
+                    <li><a onclick="alerte()" name="membres" class="bouton"><span class="material-icons icon-menu">groups</span> &ensp;Membres</a></li>
+                    
+                    <li><a href="projet.html" class="bouton"><span class="material-icons icon-menu">emoji_objects</span> &ensp;Projets</a></li>
+                   
+                    <li><a href="publications.html" class="bouton"><span class="material-icons icon-menu">edit</span> &ensp;Publications</a></li>
+                    
+                    <li><a href="partenaires.html" class="bouton"><span class="material-icons icon-menu">handshake</span> &ensp;Partenaires</a></li>
+                    
+                    <li class="dropbutton">
+                        <a class="bouton"><span class="material-icons icon-menu">add_circle_outline</span> &ensp;Info et contacts<span class="material-icons icon-menu drop">arrow_drop_down</span></a>
+                        <div class="dropdown-menu">
+                            <a href="contact.html" class="sous-bouton separateur"><div class="rectangle"></div>Contactez-nous</a>
+                            <a href="plandacces.html" class="sous-bouton separateur"><div class="rectangle"></div>Plan d’accès</a>
+                            <a href="offres_emploi.html" class="sous-bouton"><div class="rectangle"></div>Offres d’emploi</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="clock" class="clock">
+                            <div id="hours-tens"></div>
+                            <div id="hours-units"></div>
+                            <div id="colon" class="colon off">:</div>
+                            <div id="minutes-tens"></div>
+                            <div id="minutes-units"></div>
+                        </div>
+                        <div id="chrono">
+                            <span>Temps écoulé :</span>
+                            <span id="time"></span>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div id="page"><!--corps de la page-->
+            <h1>Platerformes Technologiques</h1>
+            <p id="para">
+                Les travaux de l’équipe débouchent souvent sur une preuve de concept, une réalisation de prototypes ou un déploiement de plateformes technologiques. Ces plateformes sont à la fois un outil interne pour mener des expérimentations et aussi un moyen de communication vers nos partenaires.
+            </p>
+            <br>
+            <div id="grid-container">
+                
+                
+                <div id="txt1">
+                    <button id="titre1" type="button" aria-haspopup="dialog" aria-controls="dialog1"><h2>Chambre connectée : Living Lab   </h2></button> 
+                    <!--aria-haspopup : Cet attribut ARIA (Accessible Rich Internet Applications) indique que l'élément a une fenêtre contextuelle (pop-up). La valeur "dialog" spécifie que la fenêtre contextuelle est une boîte de dialogue. Cela aide les technologies d'assistance (comme les lecteurs d'écran) à comprendre que cliquer sur ce bouton ouvrira une boîte de dialogue, améliorant ainsi l'accessibilité.-->
+                    <!-- Cet attribut ARIA identifie l'élément que le bouton contrôle. La valeur "dialog" doit correspondre à l'identifiant (id) de l'élément de la boîte de dialogue. Dans ce cas, cela signifie que ce bouton contrôle l'élément avec l'id "dialog".-->
+                    
+                    <!--<h2>Chambre connectée : Living lab</h2>-->
+                    <p id="texte1">
+                        Le living Lab est le fruit de collaboration avec l’entreprise de mutuelle santé Malakoff Médéric. Initialement, ce Living Lab avait pour but de détecter la chute des personnes âgées sans utiliser de capteurs portés (bracelet, médaillon...). Une solution a été proposée en utilisant un capteur de type Kinect permettant de garantir le respect de la vie privée et de connaitre à chaque instant la position de la personne dans le studio. Afin d'étendre les possibilités du studio, un ensemble de capteurs ont été ajoutés : prises connectées, capteurs d'environnements, température, lumière, humidité, gaz...), capteurs de consommation (électricité, eau), Caméras, micro et haut parleurs. Plusieurs scénarios ont été mis en place pour utiliser les données des différents capteurs et envoyer une alarme (sms, mail) en cas de chute ou si la personne reste trop longtemps allongée sur le sol, en cas de détection d'anomalie (pas suffisamment de consommation d'eau en fonction d'une température trop élevée...). Ce démonstrateur permet également de visualiser les données des différents capteurs en temps réel et à distance, en se connectant sur un site web. Les travaux futurs en lien avec cette plateforme à développer de scénarios en conditions "réelles" dans des EPHAD par exemple pour contribuer dans la prise en charge des risques liés aux personnes en situation de dépendance (déshydratation, comportement, chutes...).
+                    </p>
+                </div>
+
+                <div id="img1">
+                    <img src="../images/livinglab.png" id="imge1" alt="livinglab">
+                </div>
+
+                <div id="txt2">
+                    <button id="titre2" type="button" aria-haspopup="dialog" aria-controls="dialog2"><h2>Environnement hybrides connectés</h2></button> 
+
+                    <!--<h2>Environnement hybrides connectés</h2>-->
+                    <p id="texte2">
+                        Cette plateforme est en cours de développement et vise à offrir des services à la personne dans des environnements indoor (bureau connecté, école connectée, usine connectée, …). Parmi les services, nous envisageons l’étude du comportement des personnes, la détection d’anomalies et la sécurité de l’environnement. Deux enjeux majeurs sont traités : (1) l’application des algorithmes d’intelligence artificielle qui prend tout son sens pour la prédiction d’évènements à risque ; (2) la mise en place de moyens numériques interopérables comme une architecture réseau dédiée et des technologies d’acquisition et de communications standards permettant l’accès aux données et la centralisation/distribution de la prise de décision. Pour cette plateforme nous disposons de moyens de calcul intensif comme le serveur GPU pour faire du FoG computing qui présente une alternative intéressante par rapport au cloud pour des raisons de sécurité de données et de coût.
+                    </p>
+                </div>
+
+                    <div id="img2">
+                        <img src="../images/plateforme.jpeg" id="imge1"> <!--image à changer-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        
+        <footer>
+            <br>
+            <br>
+            <table cellpadding="10"><!--tableau pour organiser le footer-->
+                <tr>
+                    <th class="col">Brest</th>
+                    <th rowspan="3" class="vide"></th>
+                    <th class="col">Nantes</th>
+                    <th rowspan="3" class="vide"></th>
+                    <th class="col">Caen</th>
+                    <th rowspan="3" class="vide"></th>
+                    <th class="col">Rennes</th>
+                    <th rowspan="3" class="vide"></th>
+                    <th class="col">Paris</th>
+                </tr>
+                <tr>
+                    <td colspan="5"></td>
+                </tr>
+                <tr>
+                    <td class="col">
+                        Adresse : CS 42807 20 rue Cuirassé Bretagne 29200 Brest
+                        <br>Téléphone : <span class="telephone">+33 2 98 03 84 00</span>
+                    </td>
+                    <td class="col">
+                        Adresse : 33 Q Avenue du Champ de Manœuvres 44470 Carquefou
+                        <br>Téléphone :<span class="telephone"> +33 2 30 13 05 60</span>
+                    </td>
+                    <td class="col">
+                        Adresse : 8 Avenue Croix Guérin 14000 Caen
+                        <br>Téléphone :<span class="telephone"> +33 2 30 31 03 20</span>
+                    </td>
+                    <td class="col">
+                        Adresse : Campus RSB 2 rue Robert d’Abrissel 35065 Rennes
+                        <br>Téléphone :<span class="telephone"> +33 2 30 13 02 50 </span>
+                    </td>
+                    <td class="col">
+                        Adresse : Campus Saint Jean 5 Rue Maurice Labrousse 92160 Antony
+                        <br>Téléphone :<span class="telephone"> +33 2 98 03 84 00 </span>
+                    </td>
+                </tr>
+            </table>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <p id="message"></p>
+                    <button id="btnClose">Fermer</button>
+                </div>
+            </div>
+
+
+            <br>
+            <table id="tab2" cellpadding="10"><!--autre tableau pour avoir seulement 3 colonnes avec nos noms et liens vers linkedin-->
+                <tr>
+                    <td class="noms">Tallulah DRENO-TABOT<span class="lien-icon"><a class="linkedin" target="_blank" href="https://www.linkedin.com/in/tallulah-dreno-tabot-9406842a3/"><i class="fa-brands fa-linkedin-in"></i></a></span></td>
+                    <td class="noms">Angèle STUTZ<span class="lien-icon"><a class="linkedin" target="_blank" href="https://www.linkedin.com/in/ang%C3%A8le-stutz-2b76832a3/"><i class="fa-brands fa-linkedin-in"></i></a></span></td>
+                    <td class="noms">Asma BEN CHAABANE<span class="lien-icon"><a class="linkedin" target="_blank" href="https://www.linkedin.com/in/asma-ben-chaabane-2a054b2a3/"><i class="fa-brands fa-linkedin-in"></i></a></span></td>
+                </tr>
+            </table>
+            <br>
+            <br>
+        </footer>
+
+    </body>
+</html>

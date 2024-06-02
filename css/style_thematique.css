@@ -1,0 +1,298 @@
+body{/*arrière plan de couleur grise, pas de marges*/
+    padding: 0;
+    margin: 0;
+    background-color: #E4E4E4;
+}
+
+/* Menu de navigation*/
+
+nav{/*couleur de l'arrière plan et du texte*/
+    background-color: black;
+    color: white;
+}
+#menu{/*on veut que le menu soit un minimum responsive*/
+    list-style-type: none;/*on enlève les puces des listes*/
+    display: none;/*cache le menu pendant le loader*/
+    justify-content: space-between;/*les boutons du menu prennent toute la place*/
+    text-align: center;
+    margin-top: 0;/*aucun espace avant le menu*/
+    padding-left:2%;/*petite marge dans le menu pour pas que les boutons soient collés*/
+    padding-right:2%;
+    align-items: center;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 15px;/*on redimensionne la police*/
+}
+nav ul li img{/*on place l'image*/
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.bouton:hover{/*changement de couleur du bouton si la souris survole*/
+    background-color: #CA0000;
+}
+#menu .bouton{/*on paramètre les boutons*/
+    color: white;
+    text-decoration: none;/*on enlève le soulignement par défaut du lien de redirection*/
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;/*coins arrondis*/
+    border-style: solid;/*bordure extérieure*/
+    border-width: 1px;
+    border-color: #CA0000;
+    align-items: center;
+    box-sizing: content-box;/*la taille du bouton dépend du contenu*/
+}
+.material-icons.icon-menu{ /*on redimensionne les icones et on les aligne*/
+    font-size: 15px; 
+    vertical-align: text-top;
+}
+.drop{/*icone triangle alignée différemment*/
+    vertical-align: middle;
+}
+.current{/*quand on est sur cette page le bouton est rouge*/
+    background-color: red;
+}
+nav ul li{
+    vertical-align: middle;
+}
+.dropdown-menu{/*menu deroulant*/
+    display: none;/*cacher le menu deroulant*/
+    position: absolute;/*sa position dépend de la position de son parent*/
+    padding-top: 3px;/*espace avec le parent*/
+}
+.sous-bouton {/*boutons du sous-menu*/
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    display: block;/*crée des boites*/
+    text-align: center;
+    background-color: #CA0000;
+    position: relative;/*sa position dépend de sa position initiale*/ 
+}
+.separateur{/*sépare les boutons du sous-menu*/
+    border-color: black;
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+.dropbutton:hover .dropdown-menu{/*si le bouton qui a un menu déroulant est survolé alors on affiche le menu déroulant*/
+    display: block;/*permet d'afficher le menu déroulant*/
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
+.dropbutton:hover .bouton {/*si le menu est survolé le bouton du menu reste rouge*/
+    background-color: #CA0000;
+}
+.rectangle {/*création d'un rectangle*/
+    height: 100%;/*taille par rapport à ses parents*/
+    width: 5px;/*largeur*/
+    background-color: #CA0000;
+    position: absolute;/*sa position dépend de celle de ses parents*/
+    left: 0;/*on le colle au bord*/
+    top: 0;
+    bottom: 0;
+}
+.sous-bouton:hover .rectangle{/*si le bouton du sous-menu est survolé, on change la couleur du rectangle*/
+    background-color:black;
+}
+
+
+
+
+
+
+
+
+#page{/*contenu de la page*/
+    display: none;/* pour cacher la page le temps du loader*/
+    flex-direction: column;
+}
+.all{
+    margin: 0;
+    padding: 20px;
+} 
+
+.paragraph-container {
+    max-width: 600px; 
+    margin: 0 auto;
+}
+
+p{
+    color: #000000; /* Paragraph text color */
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+}
+
+.paragraph{
+    color: #000000; /* Paragraph text color */
+    border: 5px solid #a00000; /* Red border */
+    background-color: #c3c0c0;
+    border-radius: 40px;
+    padding: 10px; 
+    margin-bottom: 20px; 
+}
+
+h2{
+    text-align: center;
+    color: #000000;
+    font-family: 'Audiowide'; 
+}
+
+
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0, 0.5);
+    
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    text-align: center;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
+footer{
+    font-family: 'Roboto', sans-serif;
+}
+table{
+    display: none;/*cacher le temps du loader*/
+    flex-direction: column;
+    padding-right: 10%;
+    padding-left:10%;
+    table-layout: fixed;/*la colonne du tableau de s'ajuste pas à la taille du contenu*/
+    border-color: black;
+    font-size: small ;
+}
+.col{
+    width:19%;/*taille des colonnes en fonction de la taille de l'écran*/
+    border-radius: 10px;
+    border-color: #CA0000;
+}
+.vide{/*on veut des colonnes qui séparent vides*/
+    width: 1.25%;
+    border-color: black;
+}
+td .col{/*le texte est aligné à gauche*/
+    text-align: left;
+    padding: 20%;
+}
+.noms{/*les noms des colonnes sont alignés au centre*/
+    text-align: center;
+    border-radius: 10px;
+    border-color: #CA0000;
+}
+#tab2 td{
+    width: 10%;
+}
+table td,th,tr{/*couleurs pour les lignes du tableau qu'on ne veut pas voir*/
+    color: white;
+    border-color: black;
+}
+.lien-icon{/*les icones linkedin sont sur la meme ligne que le texte*/
+    display:inline-block;
+    margin-left: 8px;
+}
+.linkedin{/*on enlève les paramètres par défaut des liens*/
+    text-decoration: none;
+    color: white;
+}
+
+table, td, th{/*bordure du tableau*/
+    border: 1px solid;
+}
+
+
+
+
+
+/*------------HORLOGE---------------*/
+/*taille des segments de l'horloge*/
+.segment0 { left: 2.5px; top: 0.625px; width: 7.5px; height: 0px; }
+.segment1 { left: 0.625px; top: 2.5px; width: 0px; height: 7.5px; }
+.segment2 { left: 11.875px; top: 2.5px; width: 0px; height: 7.5px; }
+.segment3 { left: 2.5px; top: 11.875px; width: 7.5px; height: 0px; }
+.segment4 { left: 0.625px; top: 13.75px; width: 0px; height: 7.5px; }
+.segment5 { left: 11.875px; top: 13.75px; width: 0px; height: 7.5px; }
+.segment6 { left: 2.5px; top: 23.125px; width: 7.5px; height: 0px; }
+
+.led {/*les 2 points */
+    position: absolute;
+    border-radius: 1.25px 1.25px 1.25px 1.25px;
+    height : 1.25px;/*hauteur*/
+    width : 1.25px;/*largeur*/
+    background: white;/*couleur*/
+
+}
+
+.segment {/*chaque segment de l'horloge*/
+    position: absolute;
+    border-radius: 1.25px;
+    border: 1.25px solid white;
+    transition: all 0.2s linear;
+}
+
+.shiftedClock{
+    position: absolute;
+    top:37.5px;
+    left:12.5px;
+}
+
+.clock > div {/*la taille de la div horloge*/
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 15px;
+    height: 25px;
+}
+
+.clock > .colon {/*la colonne des points*/
+    font-size: 12.5px;
+    height: 15px;
+    width: 5px;
+    top: -9.375px;
+    color: white;
+    text-align: center;
+}
+
+.off {
+    transition: all 0.2s linear;
+    opacity: 0.2;
+}
+
+
+/*----chrono----*/
+#chrono{
+    font-size: 0.8em;
+    width : 100px;
+}
