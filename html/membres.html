@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <link href="../css/stylemembres.css" rel="stylesheet"> <!--on relie le fichier html au fichier css correspondant-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet"><!--importation des icones google-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"><!--importation des polices de google-->
+        <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Marko+One&family=Roboto&family=Stint+Ultra+Expanded&display=swap" rel="stylesheet"><!--importation de Roboto et Lalezar-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"><!--importation des icones de fontawesome-->
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lalezar&family=Marko+One&family=Roboto&display=swap" rel="stylesheet"><!--importation de Audiowide-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" class="bootstrap">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous" class="bootstrap"></script>
+        <script src="../js/membre.js" defer></script>
+        <script src="../js/menu.js" defer></script><!--pour le javascript du menu-->
+        <title>Membres</title>
+        <script src="../js/membre.js" defer></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+        <title> Membres </title>
+    </head>
+    <body>
+        <div id="reload" class="text-center"><!--le loader de 2sec-->
+            <br>
+            <br>
+            <div class="spinner-border text-danger" style="width: 8rem; height: 8rem;" role="status">
+                <span class="sr-only"></span>
+            </div>
+        </div>
+        <header>
+            <nav>
+                <ul id="menu"><!--création d'un menu-->
+                    <li><img src="../images/LabISEN.png" alt="logo officiel" height="70" onclick="clicLogo()"></li>
+                    <li><a href="accueil.html" class="bouton"><span class="material-icons icon-menu">home</span> &ensp;Accueil</a></li>
+                    <li class="dropbutton"><!--menu déroulant-->
+                        <a class="bouton"><span class="material-icons icon-menu">search</span> &ensp;Recherche<span class="material-icons icon-menu drop">arrow_drop_down</span></a>
+                        <div class="dropdown-menu">
+                            <a href="thematique_ver-finale.html" class="sous-bouton separateur"><div class="rectangle"></div>Thématiques de recherche</a>
+                            <a href="plateformes.html" class="sous-bouton"><div class="rectangle"></div>Plateformes technologiques</a>
+                        </div>
+                    </li>
+                    <li><a onclick="alerte()" name="membres" class="current bouton"><span class="material-icons icon-menu">groups</span> &ensp;Membres</a></li>
+                    <li><a href="projet.html" class="bouton"><span class="material-icons icon-menu">emoji_objects</span> &ensp;Projets</a></li>
+                    <li><a href="publications.html" class="bouton"><span class="material-icons icon-menu">edit</span> &ensp;Publications</a></li>
+                    <li><a href="partenaires.html" class="bouton"><span class="material-icons icon-menu">handshake</span> &ensp;Partenaires</a></li>
+                    <li class="dropbutton"><!--menu déroulant-->
+                        <a class="bouton"><span class="material-icons icon-menu">add_circle_outline</span> &ensp;Info et contacts<span class="material-icons icon-menu drop">arrow_drop_down</span></a>
+                        <div class="dropdown-menu">
+                            <a href="contact.html" class="sous-bouton separateur"><div class="rectangle"></div>Contactez-nous</a>
+                            <a href="plandacces.html" class="sous-bouton separateur"><div class="rectangle"></div>Plan d’accès</a>
+                            <a href="offres_emploi.html" class="sous-bouton"><div class="rectangle"></div>Offres d’emploi</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="clock" class="clock">
+                            <div id="hours-tens"></div>
+                            <div id="hours-units"></div>
+                            <div id="colon" class="colon off">:</div>
+                            <div id="minutes-tens"></div>
+                            <div id="minutes-units"></div>
+                        </div>
+                        <div id="chrono">
+                            <span>Temps écoulé :</span>
+                            <span id="time"></span>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </header>
+        <div id="page"><!--corps de la page-->
+            <button id="bouton-edition" onclick="edition()">Editer les cartes</button><!--bouton d'édition-->
+            <br>
+            <h1 id="a">Enseignants chercheurs permanents</h1><!--id avec une lettre sert à positionner l'élément dans la grid-->
+            <div class="card" id="b"><!--création d'une carte-->
+                <div id="gratter-box" name="karine">
+                    <img src="../images/karine.jpg" class="image gratter">
+                </div>
+                <div class="card-body" contenteditable="false"><!--le corps (texte) de la carte-->
+                    <h3 class="card-title">Ayoub Karine</h3>
+                    <p class="card-text">
+                        Enseignant chercheur
+                        <br>ISEN Yncréa Ouest - Nantes
+                        <br>ayoub.karine@isen-ouest.yncrea.fr
+                    </p>
+                    <hr>
+                    <div class="icones-card"><!--icones de la carte-->
+                        <a href="https://ayoubkarine.github.io/" target="blank"><i class="fa-solid fa-globe"></i></a>
+                        <a href="https://www.linkedin.com/in/ayoub-karine-a01ba384" target="blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://scholar.google.fr/citations?user=acAw9KAAAAAJ&hl=fr" target="blank"><i class="fa-solid fa-graduation-cap"></i></a>
+                        <a href="https://www.researchgate.net/profile/Ayoub-Karine" target="blank"><i class="fa-brands fa-researchgate"></i></a>
+                    </div>
+                    <div class="mots-clés">
+                            <p>Image Processing</p>
+                            <p>Machine Learning</p>
+                            <p>Deep Learning</p>
+                            <p>Remote Sensing</p>
+                            <p>Computer Vision</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="c"><!--création d'une carte-->
+                <div class="image-box">
+                    <img src="../images/jridi.jpeg" class="image">
+                </div>
+                <div class="card-body" contenteditable="false">
+                    <h3 class="card-title">Maher Jridi</h3>
+                    <p class="card-text">
+                        Enseignant chercheur, HDR
+                        <br>ISEN Yncréa Ouest - Nantes
+                        <br>maher.jridi@isen-ouest.ycnrea.fr
+                    </p>
+                    <hr>
+                    <div class="icones-card">
+                        <a href="https://sites.google.com/website/jridimaher/" target="blank"><i class="fa-solid fa-globe"></i></a>
+                        <a href="https://www.linkedin.com/in/maher-jridi-a7861a3a/?originalSubdomain=fr" target="blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://scholar.google.fr/citations?hl=fr&user=N8Xv4GQAAAAJ" target="blank"><i class="fa-solid fa-graduation-cap"></i></a>
+                        <a href="https://www.researchgate.net/profile/Maher_Jridi" target="blank"><i class="fa-brands fa-researchgate"></i></a>
+                    </div>
+                    <div class="mots-clés">
+                            <p>High Performance Embedded Computing</p>
+                            <p>IoT</p>
+                            <p>IoMT</p>
+                            <p>Industrial IoT</p>
+                            <p>Digital VLSI design</p>
+                            <p>Algorithm-Architecture Co-design</p>
+                    </div>          
+                </div>
+            </div>
+            <h1 id="d">Post-docs</h1>
+            <div class="card" id="e"><!--création d'une carte-->
+                <div class="image-box">
+                    <img src="../images/lefebvre.png" class="image">
+                </div>
+                <div class="card-body" contenteditable="false">
+                    <h3 class="card-title">Sylvain Lefebvre</h3>
+                    <p class="card-text"> 
+                        Période : 01/2022 au 04/2023 
+                        <br>ISEN Yncréa Ouest – Nantes
+                        <br> sylvain.lefebvre@isen-ouest.yncrea.fr
+                    </p>
+                    <hr>
+                    <div class="icones-card">
+                        <a href="https://www.antexel.com/sylefeb/research/" target="blank"><i class="fa-solid fa-globe"></i></a>
+                        <a href="https://fr.linkedin.com/in/sylefeb" target="blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://scholar.google.fr/citations?user=o29n55IAAAAJ&hl=fr" target="blank"><i class="fa-solid fa-graduation-cap"></i></a>
+                        <a href="https://www.researchgate.net/scientific-contributions/Sylvain-Lefebvre-2097926546" target="blank"><i class="fa-brands fa-researchgate"></i></a>
+                    </div>
+                    <div class="mots-clés">
+                            <p>Projet : Industrie 4.0</p>
+                    </div>          
+                </div>
+            </div>
+            
+            <h1 id="f">Doctorants actuels</h1>
+            <div class="card" id="g"><!--création d'une carte-->
+                <div class="image-box">
+                    <img src="../images/bourbia.jpeg" class="image">
+                </div>
+                <div class="card-body" contenteditable="false">
+                    <h3 class="card-title">Salima Bourbia</h3>
+                    <p class="card-text"> 
+                        Inscrit depuis : 12/2020
+                        <br>Encadrants : Ayoub Karine, Maher Jridi
+                        <br>ISEN Yncréa Ouest – Nantes
+                        <br>Période : 01/2022 au 04/2023 
+                    </p>
+                    <hr>
+                    <div class="icones-card">
+                        <a href="https://github.com/Salima-Bourbia/multitask-cnn-nrsiqa_2021" target="blank"><i class="fa-solid fa-globe"></i></a>
+                        <a href="https://fr.linkedin.com/in/bourbia-salima-2828b718a" target="blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://scholar.google.com/citations?user=kjMDcpMAAAAJ&hl=en" target="blank"><i class="fa-solid fa-graduation-cap"></i></a>
+                        <a href="https://www.researchgate.net/profile/Salima-Bourbia" target="blank"><i class="fa-brands fa-researchgate"></i></a>
+                    </div>
+                    <div class="mots-clés">
+                            <p>Sujet : Evaluation de la qualité des nuages de points 3D</p>
+                    </div>          
+                </div>
+            </div>
+
+            <h1 id="h">Anciens doctorants</h1>
+            <div class="card" id="i"><!--création d'une carte-->
+                <div class="image-box">
+                    <img src="../images/benarab.jpeg" class="image">
+                </div>
+                <div class="card-body" contenteditable="false">
+                    <h3 class="card-title">Djamel Benarab</h3>
+                    <p class="card-text"> 
+                        (thèse soutenue le 02/12/2016)
+                        <br>Encadrants : Ayman Alfalou, Thibault Napoléon, Antoine Verney, Philippe Hellard
+                        <br>Inscrit depuis : 12/2020
+                    </p>
+                    <hr>
+                    <div class="icones-card">
+                        <a href="https://slideplayer.fr/slide/14857185/" target="blank"><i class="fa-solid fa-globe"></i></a>
+                        <a href="https://fr.linkedin.com/in/djamel-eddine-benarab-b59b358b" target="blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://scholar.google.fr/citations?user=i31_7KgAAAAJ&hl=fr" target="blank"><i class="fa-solid fa-graduation-cap"></i></a>
+                        <a href="https://www.researchgate.net/profile/Djamel-Benarab" target="blank"><i class="fa-brands fa-researchgate"></i></a>
+                    </div>
+                    <div class="mots-clés">
+                            <p>Poste actuel : Ingénieur R&D chez Diota</p>
+                            <p>Sujet : Suivi automatique de nageurs à partir des séquences vidéo : application à l'analyse des performances</p>
+                    </div>          
+                </div>
+            </div>
+            <h1 id="j">Anciens stagiaires</h1>
+            <div class="card" id="k"><!--création d'une carte-->
+                <div class="image-box">
+                    <img src="../images/bourbia.jpeg" class="image">
+                </div>
+                <div class="card-body" contenteditable="false">
+                    <h3 class="card-title">Salima Bourbia</h3>
+                    <p class="card-text"> 
+                        (01/03/2020 - 01/09/2020)
+                        <br>Encadrants : Ayoub Karine, Mohammed EL Hassouni, Aladine Chetouani
+                    </p>
+                    <hr>
+                    <div class="icones-card">
+                        <a href="https://github.com/Salima-Bourbia/multitask-cnn-nrsiqa_2021" target="blank"><i class="fa-solid fa-globe"></i></a>
+                        <a href="https://fr.linkedin.com/in/bourbia-salima-2828b718a" target="blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://scholar.google.com/citations?user=kjMDcpMAAAAJ&hl=en" target="blank"><i class="fa-solid fa-graduation-cap"></i></a>
+                        <a href="https://www.researchgate.net/profile/Salima-Bourbia" target="blank"><i class="fa-brands fa-researchgate"></i></a>
+                    </div>
+                    <div class="mots-clés">
+                            <p>Sujet : Quality assessment of stereoscopic images using deep learning</p>
+                    </div>          
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <br>
+            <br>
+            <table cellpadding="10"><!--tableau pour organiser le footer-->
+                <tr>
+                    <th class="col">Brest</th>
+                    <th rowspan="3" class="vide"></th>
+                    <th class="col">Nantes</th>
+                    <th rowspan="3" class="vide"></th>
+                    <th class="col">Caen</th>
+                    <th rowspan="3" class="vide"></th>
+                    <th class="col">Rennes</th>
+                    <th rowspan="3" class="vide"></th>
+                    <th class="col">Paris</th>
+                </tr>
+                <tr>
+                    <td colspan="5"></td>
+                </tr>
+                <tr>
+                    <td class="col">
+                        Adresse : CS 42807 20 rue Cuirassé Bretagne 29200 Brest
+                        <br>Téléphone : <span class="telephone">+33 2 98 03 84 00</span>
+                    </td>
+                    <td class="col">
+                        Adresse : 33 Q Avenue du Champ de Manœuvres 44470 Carquefou
+                        <br>Téléphone :<span class="telephone"> +33 2 30 13 05 60</span>
+                    </td>
+                    <td class="col">
+                        Adresse : 8 Avenue Croix Guérin 14000 Caen
+                        <br>Téléphone :<span class="telephone"> +33 2 30 31 03 20</span>
+                    </td>
+                    <td class="col">
+                        Adresse : Campus RSB 2 rue Robert d’Abrissel 35065 Rennes
+                        <br>Téléphone :<span class="telephone"> +33 2 30 13 02 50 </span>
+                    </td>
+                    <td class="col">
+                        Adresse : Campus Saint Jean 5 Rue Maurice Labrousse 92160 Antony
+                        <br>Téléphone :<span class="telephone"> +33 2 98 03 84 00 </span>
+                    </td>
+                </tr>
+            </table>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <p id="message"></p>
+                    <button id="btnClose">Fermer</button>
+                </div>
+            </div>
+            <br>
+            <table id="tab2" cellpadding="10"><!--autre tableau pour avoir seulement 3 colonnes avec nos noms et liens vers linkedin-->
+                <tr>
+                    <td class="noms">Tallulah DRENO-TABOT<span class="lien-icon"><a class="linkedin" target="_blank" href="https://www.linkedin.com/in/tallulah-dreno-tabot-9406842a3/"><i class="fa-brands fa-linkedin-in"></i></a></span></td>
+                    <td class="noms">Angèle STUTZ<span class="lien-icon"><a class="linkedin" target="_blank" href="https://www.linkedin.com/in/ang%C3%A8le-stutz-2b76832a3/"><i class="fa-brands fa-linkedin-in"></i></a></span></td>
+                    <td class="noms">Asma BEN CHAABANE<span class="lien-icon"><a class="linkedin" target="_blank" href="https://www.linkedin.com/in/asma-ben-chaabane-2a054b2a3/"><i class="fa-brands fa-linkedin-in"></i></a></span></td>
+                </tr>
+            </table>
+            <br>
+            <br>
+        </footer>
+
+    </body>
+</html>
